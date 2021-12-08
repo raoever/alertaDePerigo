@@ -48,8 +48,6 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
     private Calendar calendar;
     private DatabaseReference database;
     private String tipoDeAlerta;
-    private String localizacao;
-    private boolean inicio = true;
     private ArrayList<String> alertas = new ArrayList<>();
     private List<Integer> numeros;
 
@@ -115,17 +113,11 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
                 SystemClock.elapsedRealtime() + 10 * 1000, 10 * 1000, pendingIntent);
     }
 
-    private void gerarAleatorios() {
-        numeros.clear();
-        Random random = new Random();
-        for (int i = 0; i < 7; i++){
-            Integer num = random.nextInt(7) + 1;
-            numeros.add(num);
-        }
-        Log.i("gerarAleatorios: ", numeros.toString());
+    public String getTipoDeAlerta() {
+        return tipoDeAlerta;
     }
 
-//    @Override
+    //    @Override
 //    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 //        super.onOptionsItemSelected(item);
 //        finishAffinity();
@@ -158,9 +150,8 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
                 || super.onSupportNavigateUp();
     }
 
-    public void falar(String tipo) {
-        Log.i("onInit: ", "aqui");
-        msg = "Alerta de " + tipo + ", Clique na notificação para saber mais!";
+    public void falar() {
+        msg = "Alerta de " + tipoDeAlerta + ", Clique no botão flutuante com o mapa para encontrar um abrigo!";
         Locale locale = new Locale("pt", "br");
         int result = textToSpeech.setLanguage(locale);
         textToSpeech.setSpeechRate(1f);
@@ -186,7 +177,6 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
             Log.i("onInit: ", tipoDeAlerta);
         }
 
-
         if (alertas.size()<1) {
             if (i == TextToSpeech.SUCCESS) {
                 msg = "Sem alertas no momento!";
@@ -209,6 +199,8 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
             } else {
                 Log.e("problemasT", "problemas com o textToSpeech");
             }
+        } else {
+            falar();
         }
     }
 
