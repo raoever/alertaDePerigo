@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "914756439929",
+    "firebase_url": "https://pdm2-925bf-default-rtdb.firebaseio.com",
+    "project_id": "pdm2-925bf",
+    "storage_bucket": "pdm2-925bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914756439929:android:937cc45e5e39dc3dff69a8",
+        "android_client_info": {
+          "package_name": "com.example.alertadeperigo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914756439929-qutm79ct9a66eird1rktvjo4i0aj7ob0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSwVehd0AYmbeQjIVuxO-axWBjNBJm5qM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914756439929-qutm79ct9a66eird1rktvjo4i0aj7ob0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

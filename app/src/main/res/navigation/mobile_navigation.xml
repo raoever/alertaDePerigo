@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.alertadeperigo.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_compartilhar"
+        android:name="com.example.alertadeperigo.ui.compartilhar.CompartilharFragment"
+        android:label="Avise um Amigo"
+        tools:layout="@layout/fragment_compartilhar" />
+
+    <fragment
+        android:id="@+id/nav_agendar"
+        android:name="com.example.alertadeperigo.ui.agendar.AgendarFragment"
+        android:label="Faça uma Doação"
+        tools:layout="@layout/fragment_agendar" />
+</navigation>
