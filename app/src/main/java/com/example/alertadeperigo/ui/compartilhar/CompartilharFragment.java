@@ -16,9 +16,6 @@ import androidx.fragment.app.Fragment;
 import com.example.alertadeperigo.R;
 
 public class CompartilharFragment extends Fragment {
-//    EditText editTextMensagem;
-//    RadioButton radioButtonWhatsapp, radioButtonGmail, radioButtonSms;
-//    MainActivity mainActivity = new MainActivity();
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
